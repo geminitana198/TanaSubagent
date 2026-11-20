@@ -1,0 +1,29 @@
+{
+  "_comment": "Mẫu cấu hình estimation. Mọi giá trị PHẢI được con người xác nhận trước khi dùng (Gate G3).",
+  "method": "WBS bottom-up (3 điểm: optimistic / most likely / pessimistic -> PERT)",
+  "unit": "man-day",
+  "hours_per_day": 8,
+  "days_per_month": 20,
+  "currency": "USD",
+  "phases": ["Requirement & Design", "Development", "Testing", "Deployment & Handover"],
+  "rates": {
+    "BA": 200,
+    "Designer": 180,
+    "BE": 180,
+    "FE": 170,
+    "Mobile": 180,
+    "QA": 140,
+    "DevOps": 200,
+    "PM": 250
+  },
+  "overhead_percent": {"PM": 10},
+  "buffer_percent": 15,
+  "complexity_guide": {
+    "_comment": "effort tham khảo (man-day, chưa test) cho 1 hạng mục — chỉnh theo năng suất đội",
+    "screen":      {"S": 1, "M": 2, "L": 4, "XL": 7},
+    "api":         {"S": 0.5, "M": 1, "L": 2, "XL": 4},
+    "batch":       {"S": 1, "M": 2, "L": 4, "XL": 6},
+    "report":      {"S": 1, "M": 2, "L": 3, "XL": 5},
+    "integration": {"S": 2, "M": 4, "L": 7, "XL": 12}
+  }
+}
